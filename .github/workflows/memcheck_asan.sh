@@ -27,6 +27,15 @@ if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
         OUTPUT+=$'\n```\n'
         OUTPUT+="$PAYLOAD_MEMCHECK"
         OUTPUT+=$'\n```\n' 
+
+        (
+            echo '<details><summary>ASAN output</sumary>'
+            echo
+            echo "$OUTPUT"
+            echo
+            echo '</details>'
+        ) >> "$GITHUB_STEP_SUMMARY"
+
     fi
 
     PAYLOAD=$(echo '{}' | jq --arg body "$OUTPUT" '.body = $body')
