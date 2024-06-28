@@ -313,7 +313,7 @@ ThorVG introduces the dedicated vector data format, known as TVG Picture, design
 </br>
 To leverage the TVG Picture format, ThorVG employs a specialized module called TVG Saver. This module is responsible for optimizing the data associated with all scene-tree nodes and storing them in binary form. During the optimization phase, TVG Saver intelligently eliminates unused information, eliminates duplicated properties, consolidates overlapping shapes, and employs data compression where feasible. Remarkably, these optimizations maintain compatibility with future versions of ThorVG libraries, with data compression utilizing the [Lempel-Ziv-Welchi](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch) algorithm when applicable.</br>
 </br>
-As a result of these efforts, the final data size is notably smaller thanother text-based vector data formats, such as SVG. This reduction in data size not only minimizes I/O operations but also mitigates memory bandwidth requirements during data loading. This aspect proves particularly beneficial for programs reliant on substantial vector resources. </br>
+As a result of these efforts, the final data size is notably smaller than other text-based vector data formats, such as SVG. This reduction in data size not only minimizes I/O operations but also mitigates memory bandwidth requirements during data loading. This aspect proves particularly beneficial for programs reliant on substantial vector resources. </br>
 </br>
 Furthermore, TVG Picture substantially streamlines resource loading tasks by circumventing the need for data interpretation, resulting in reduced runtime memory demands and rendering tasks that subsequently enhance performance. </br>
 </br>
